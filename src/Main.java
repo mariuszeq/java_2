@@ -1,9 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static <hashSet> void main(String[] args) {
 
         System.out.println("Hello world!");
 
@@ -51,5 +49,18 @@ public class Main {
         System.out.println("wylosowane liczby:");
         System.out.println(tablicalosowychbezpowtorzen);
         //los bez powtorzen do zbioru
+        HashSet<Integer> zbior = new HashSet<>();
+        while (zbior.size()<6) {
+            int liczba = (int) (Math.random()*10+1);
+            zbior.add(liczba);
+        }
+        System.out.println(zbior);
+        LinkedList<Integer> trafione = new LinkedList<>();
+        for (Integer wpisana: liczbaliczbpisanych) {
+            if(zbior.contains(wpisana)){
+                trafione.add(wpisana);
+            }
+        }
+        System.out.println("trafione" + trafione);
     }
 }
