@@ -39,5 +39,17 @@ public class Main {
         for (int i = 0; i < liczbaliczbpisanych.size(); i++) {
             System.out.println(liczbaliczbpisanych.get(i));
         }
+        //wypisywanie liczb bez powtorzen
+        ArrayList<Integer>tablicalosowychbezpowtorzen = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int) (Math.random()*100+1);
+            while (liczbaliczbpisanych.contains(liczba)) {
+                liczba = (int) (Math.random()*100+1);
+            }
+            tablicalosowychbezpowtorzen.add(liczba);
+        }
+        System.out.println("wylosowane liczby:");
+        System.out.println(tablicalosowychbezpowtorzen);
+        //los bez powtorzen do zbioru
     }
 }
